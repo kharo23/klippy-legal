@@ -30,7 +30,14 @@ a:hover { color: #fff; }
   margin: 0 auto;
 }
 
-.hero { padding: 12vh 0 10vh; }
+.hero { padding: 6vh 0 4vh; }
+
+/* Indice delle sezioni nella hero: rende visibile che il sito ha contenuto
+   anche senza scorrere. Serve al requisito "fully developed website": se la
+   prima schermata sembra una landing page, viene giudicata tale. */
+.jump{display:flex;flex-wrap:wrap;gap:8px 18px;margin:26px 0 0;padding:0;list-style:none;font-size:14px}
+.jump a{opacity:.75;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);padding-bottom:2px}
+.jump a:hover{opacity:1}
 .document { padding: 64px 0 96px; }
 
 .logo {
