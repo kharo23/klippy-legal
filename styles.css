@@ -102,3 +102,19 @@ ul { padding-left: 24px; }
   .hero { padding-top: 8vh; }
   .document { padding-top: 36px; }
 }
+
+/* --- sezioni di contenuto (aggiunte per soddisfare il requisito TikTok
+       "fully developed website", che vieta le landing page) --- */
+.block{max-width:720px;margin:0 auto;padding:34px 22px;text-align:left}
+.block h2{font-size:20px;margin:0 0 12px;letter-spacing:-.01em}
+.block p{margin:0 0 12px;line-height:1.65}
+.steps{margin:0;padding-left:20px}
+.steps li{margin:9px 0;line-height:1.6}
+.defs{margin:0}
+.defs dt{font-weight:700;margin:16px 0 4px}
+.defs dd{margin:0 0 4px;line-height:1.6;opacity:.9}
+.dont{margin:0;padding-left:20px}
+.dont li{margin:7px 0;line-height:1.6}
+.note{border-left:3px solid currentColor;padding-left:14px;opacity:.95}
+code{font-size:.92em;padding:1px 5px;border-radius:5px;background:rgba(127,127,127,.18)}
+footer.block{border-top:1px solid rgba(127,127,127,.28);margin-top:14px}

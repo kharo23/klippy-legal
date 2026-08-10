@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Klippy Studio</title>
-  <meta name="description" content="Legal information for Klippy Studio, a desktop workflow for reviewing and uploading short-form video drafts.">
+  <title>Klippy Studio — creator-controlled video drafts for TikTok</title>
+  <meta name="description" content="Klippy Studio is a desktop workflow for reviewing authorized short-form clips and sending selected videos to the creator's own TikTok inbox as drafts. The creator always decides what gets published.">
   <meta name="tiktok-developers-site-verification" content="1nYU2a6rkz5jgS3N9yeqKxzigdpg7mus">
   <!-- tiktok-developers-site-verification=1nYU2a6rkz5jgS3N9yeqKxzigdpg7mus -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -12,16 +12,106 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <main class="shell hero">
     <img class="logo" src="assets/klippy-icon-512.png" alt="Klippy Studio icon">
     <p class="eyebrow">KLIPPY STUDIO</p>
     <h1>Creator-controlled video drafts.</h1>
-    <p class="lede">A desktop workflow for reviewing authorized short-form clips and sending selected videos to the creator's TikTok inbox as drafts.</p>
+    <p class="lede">A desktop workflow for reviewing authorized short-form clips and sending
+      selected videos to the creator's TikTok inbox as drafts. Nothing is ever published
+      automatically — the creator opens TikTok, reviews the draft, and decides.</p>
     <nav aria-label="Legal documents">
       <a class="button" href="privacy/">Privacy Policy</a>
       <a class="button secondary" href="terms/">Terms of Service</a>
     </nav>
-    <p class="fine">Klippy Studio is an independent tool and is not affiliated with, endorsed by, or sponsored by TikTok.</p>
   </main>
+
+  <section class="shell block">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><strong>Import.</strong> The creator adds a long-form video they own or are
+        licensed to use — a podcast episode, an interview, a recorded stream.</li>
+      <li><strong>Prepare.</strong> Klippy Studio transcribes the audio, cuts the selected
+        moments, reframes them to a 9:16 vertical format and burns in subtitles.</li>
+      <li><strong>Review.</strong> Every clip is shown in a contact sheet with its caption
+        and hashtags. The creator keeps or discards each one.</li>
+      <li><strong>Transfer.</strong> Approved clips are sent to the creator's own TikTok
+        inbox as drafts, ready to be finished and published from the TikTok app.</li>
+    </ol>
+  </section>
+
+  <section class="shell block">
+    <h2>How Klippy Studio uses TikTok</h2>
+    <p>Klippy Studio integrates with two TikTok for Developers products. Each is used for a
+      single, specific purpose:</p>
+    <dl class="defs">
+      <dt>Login Kit — <code>user.info.basic</code></dt>
+      <dd>Authenticates the creator with OAuth (state and PKCE) and displays the connected
+        profile name, so it is always clear which account will receive the content.</dd>
+      <dt>Content Posting API — <code>video.upload</code></dt>
+      <dd>Transfers a creator-selected video file to that same account's TikTok inbox
+        <strong>as a draft</strong>. The creator then edits the caption, chooses the
+        settings and publishes from within the TikTok app.</dd>
+    </dl>
+    <p class="note"><strong>Direct Post is not enabled.</strong> Klippy Studio does not
+      request the <code>video.publish</code> scope and has no ability to publish to a
+      profile. Every post is a human decision made inside TikTok.</p>
+  </section>
+
+  <section class="shell block">
+    <h2>What Klippy Studio does not do</h2>
+    <ul class="dont">
+      <li>It does not publish, schedule or post content automatically.</li>
+      <li>It does not read, collect or analyse other users' TikTok data.</li>
+      <li>It does not manage accounts on behalf of third parties.</li>
+      <li>It does not automate browsing, following, liking or commenting.</li>
+      <li>It does not buy, sell or artificially inflate engagement.</li>
+    </ul>
+  </section>
+
+  <section class="shell block">
+    <h2>Your data</h2>
+    <p>Klippy Studio runs entirely on the creator's own computer. There is no server, no
+      account to create and no cloud storage. Access and refresh tokens are kept in local
+      files on that machine and are used only to talk to TikTok's own API.</p>
+    <p>No data is sold, rented or shared with third parties, and no analytics or advertising
+      trackers are used. Access can be revoked at any time from TikTok's settings, and
+      deleting the application folder removes everything stored locally.</p>
+    <p><a href="privacy/">Read the full Privacy Policy →</a></p>
+  </section>
+
+  <section class="shell block">
+    <h2>Requirements</h2>
+    <ul class="dont">
+      <li>A desktop computer running macOS.</li>
+      <li>A TikTok account owned by the person using the application.</li>
+      <li>Source video the creator owns or is licensed to use. Klippy Studio does not
+        provide, host or distribute any content.</li>
+    </ul>
+  </section>
+
+  <section class="shell block">
+    <h2>Questions</h2>
+    <dl class="defs">
+      <dt>Will my clips be posted without me seeing them?</dt>
+      <dd>No. Clips arrive as drafts in your TikTok inbox. Nothing appears on your profile
+        until you publish it yourself from the TikTok app.</dd>
+      <dt>Can it access my followers or messages?</dt>
+      <dd>No. The only profile information requested is your basic public profile, used to
+        show which account is connected.</dd>
+      <dt>How do I disconnect it?</dt>
+      <dd>Revoke the application from your TikTok account settings. It will immediately lose
+        the ability to send anything.</dd>
+    </dl>
+  </section>
+
+  <footer class="shell block">
+    <p><a href="privacy/">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms/">Terms of Service</a></p>
+    <p class="fine">For questions about this application, contact the email address listed in
+      our TikTok developer application.</p>
+    <p class="fine">Klippy Studio is an independent tool and is not affiliated with, endorsed
+      by, or sponsored by TikTok.</p>
+  </footer>
+
 </body>
 </html>
